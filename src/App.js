@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import About from "./components/About";
 import ContactForm from "./components/Contact";
-import Body from "./components/Body";
+import Body from "./components/TopCrop";
 import Footer from "./components/Footer";
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
       <div>
         {handleCategoryChange()}
       </div>
-      <footer>
+      <footer className="footer">
         <Footer />
       </footer>
     </div>

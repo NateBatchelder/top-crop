@@ -6,12 +6,6 @@ function Header(props) {
 
   return (
     <header>
-      <div>
-        <a href="./">
-          <h2>Top Crop</h2>
-        </a>
-          <h4>Helping the Headless</h4>
-      </div>
       <nav>
         <Nav
           currentCategory={currentCategory}

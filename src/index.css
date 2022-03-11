@@ -5,10 +5,10 @@ main {
 }
 :root {
   --primary: lightblue;
-  --secondary: #f3a847;
-  --tertiary: #b12704;
+  --secondary: lightgreen;
+  --tertiary: lightyellow;
   --light: #fafafa;
-  --dark: lightblue;
+  --dark: grey;   
   --darker: #111111;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -89,7 +89,7 @@ a:hover {
 }
 
 header {
-  background: var(--dark);
+  background: var(--primary);
 }
 
 header a {
@@ -291,24 +291,28 @@ a {
 
 
 .navActive {
-  color: var(--secondary);
+  color: var(--tertiary);
   font-size: 125%;
 }
 
 
 
 .footer {
+  display: flex;
+  background-color: var(--primary);
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
   width: 100%;
-  background-color: lightblue;
-  color: #fdf4e3;
-  text-align: center;
+  color: var--(light);
+  justify-content: center;
+  align-items: center;
   
 }
 
 .footer a {
-  color: #fdf4e3;
+  color: var(--light);
 }
 

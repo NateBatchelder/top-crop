@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Footer () {
+function Footer() {
   return (
-    <div>
+    <footer className="flex-row mx-2">
       <h1>Footer</h1>
-    </div>
+    </footer>
   );
 }
 
