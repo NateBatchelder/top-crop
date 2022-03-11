@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/top-crop/static/css/main.87a96386.css",
+    "main.js": "/top-crop/static/js/main.b2c9e708.js",
+    "static/js/787.5726e47d.chunk.js": "/top-crop/static/js/787.5726e47d.chunk.js",
+    "index.html": "/top-crop/index.html",
+    "main.87a96386.css.map": "/top-crop/static/css/main.87a96386.css.map",
+    "main.b2c9e708.js.map": "/top-crop/static/js/main.b2c9e708.js.map",
+    "787.5726e47d.chunk.js.map": "/top-crop/static/js/787.5726e47d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87a96386.css",
+    "static/js/main.b2c9e708.js"
+  ]
+}
