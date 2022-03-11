@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import "./App.css";
+import Header from "./components/Header";
+import About from "./components/About";
+import ContactForm from "./components/Contact";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 function App() {
+  const [currentCategory, setCurrentCategory] = useState("about");
+
+  const handleCategoryChange = () => {
+    switch (currentCategory) {
+      case "about":
+        return <About />;
+      case "contact":
+        return <ContactForm />;
+      case "body":
+        return <Body />;
+      default:
+        return <About />;
+    }
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <Header
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        ></Header>
       </header>
+      <div>
+        {handleCategoryChange()}
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
