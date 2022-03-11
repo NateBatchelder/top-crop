@@ -1,10 +1,26 @@
 import React from 'react';
 
-function Nav () {
+function Nav(props) {
+    const { currentCategory, setCurrentCategory } = props;
+    
+    
   return (
-    <div>
-      <h1>Nav</h1>
-    </div>
+    <nav>
+      <ul>
+        <li className={currentCategory === "about" ? "mx-2 navActive" : "mx-2"}>
+          <span onClick={() => setCurrentCategory("about")}>About</span>
+        </li>
+        <li className={currentCategory === "about" ? "mx-2 navActive" : "mx-2"}>
+          <span onClick={() => setCurrentCategory("about")}>About</span>
+        </li>
+        <li className={currentCategory === "about" ? "mx-2 navActive" : "mx-2"}>
+          <span onClick={() => setCurrentCategory("about")}>About</span>
+        </li>
+        <li className={currentCategory === "about" ? "mx-2 navActive" : "mx-2"}>
+          <span onClick={() => setCurrentCategory("about")}>About</span>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
