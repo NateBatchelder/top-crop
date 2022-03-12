@@ -1,62 +1,52 @@
-import React from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React from "react";
 
 function Nav(props) {
-  const {
-    categories = [],
-    setCurrentCategory,
-    contactSelected,
-    currentCategory,
-    setContactSelected,
-  } = props;
+  const { currentCategory, setCurrentCategory } = props;
 
   return (
-    <header className="flex-row px-1">
-      <h2>
-        <a data-testid="link" href="/">
-          <span role="img" aria-label="camera">
-            {" "}
-            📸
-          </span>{" "}
-          Top Crop
-        </a>
-      </h2>
-      <nav>
+    <nav>
+      <div>
+        <h2>
+          <a data-testid="link" href="/">
+            <span role="img" aria-label="camera">
+              {" "}
+              📸
+            </span>{" "}
+            Top Crop
+          </a>
+        </h2>
+      </div>
+      <div>
         <ul className="flex-row">
-          <li className="mx-2">
-            <a
-              data-testid="about"
-              href="#about"
-              onClick={() => setContactSelected(false)}
-            >
+          <li
+            className={currentCategory === "about" ? "mx-2 navActive" : "mx-2"}
+          >
+            <span onClick={() => setCurrentCategory("about")}>About</span>
+          </li>
+          <li
+            className={
+              currentCategory === "topcrop" ? "mx-2 navActive" : "mx-2"
+            }
+          >
+            <span onClick={() => setCurrentCategory("topcrop")}>Top Crop</span>
+          </li>
+          <li
+            className={currentCategory === "meet" ? "mx-2 navActive" : "mx-2"}
+          >
+            <span onClick={() => setCurrentCategory("meet")}>
               Meet the Developers
-            </a>
+            </span>
           </li>
-          <li className={`mx-2 ${contactSelected && "navActive"}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+          <li
+            className={
+              currentCategory === "contact" ? "mx-2 navActive" : "mx-2"
+            }
+          >
+            <span onClick={() => setCurrentCategory("contact")}>Contact</span>
           </li>
-          {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name &&
-                !contactSelected &&
-                "navActive"
-              }`}
-              key={category.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentCategory(category);
-                  setContactSelected(false);
-                }}
-              >
-                {capitalizeFirstLetter(category.name)}
-              </span>
-            </li>
-          ))}
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
 
