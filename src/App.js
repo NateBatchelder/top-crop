@@ -34,7 +34,6 @@ function App() {
       </header>
       <div>
         {handleCategoryChange()}
-        <About></About>
       </div>
       <footer className="footer">
         <Footer />

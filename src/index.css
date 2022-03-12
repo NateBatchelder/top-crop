@@ -304,10 +304,9 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50px;
   width: 100%;
   color: var--(light);
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   
 }
