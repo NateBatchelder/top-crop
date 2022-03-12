@@ -1,5 +1,5 @@
-import React from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React from "react";
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
   const {
@@ -21,6 +21,7 @@ function Nav(props) {
           Top Crop
         </a>
       </h2>
+      
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
@@ -28,8 +29,7 @@ function Nav(props) {
               data-testid="about"
               href="#about"
               onClick={() => setContactSelected(false)}
-            >
-              Meet the Developers
+            >Meet the Developers
             </a>
           </li>
           <li className={`mx-2 ${contactSelected && "navActive"}`}>

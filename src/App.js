@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./App.css";
 import Header from "./components/Header";
 import About from "./components/About";
+import Meet from "./components/Meet";
 import ContactForm from "./components/Contact";
 import Body from "./components/TopCrop";
 import Footer from "./components/Footer";
@@ -11,11 +12,11 @@ function App() {
 
   const handleCategoryChange = () => {
     switch (currentCategory) {
-      case "about":
-        return <About />;
+      case "meet":
+        return <Meet />;
       case "contact":
         return <ContactForm />;
-      case "body":
+      case "topcrop":
         return <Body />;
       default:
         return <About />;
@@ -33,6 +34,7 @@ function App() {
       </header>
       <div>
         {handleCategoryChange()}
+        <About></About>
       </div>
       <footer className="footer">
         <Footer />
