@@ -6,6 +6,8 @@ function About() {
       <div>
         <h1>Under Development</h1>
       </div>
+      <br />
+      <br />
 
       <section>
         <h2>About</h2>
@@ -15,9 +17,13 @@ function About() {
         <h2>Technologies</h2>
         <ul>
           <li>React</li>
-          <li>JavaScript</li>
-          <li>HTML</li>
+          <li>Material Design</li>
           <li>Bootstrap</li>
+          
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+
         </ul>
       </section>
       <section>
